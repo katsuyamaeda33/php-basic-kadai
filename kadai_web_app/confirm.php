@@ -4,7 +4,7 @@ session_start();
 
 $name = $_POST['employee_name'];
 $age = $_POST['employee_age'];
-$category = $_POST['category'];
+$department = $_POST['department'];
 
 $errors = [];
 
@@ -24,7 +24,7 @@ if(empty($errors)){
 
 $_SESSION['name']=$name;
 $_SESSION['age']=$age;
-$_SESSION['category']=$category;
+$_SESSION['department']=$department;
 
 setcookie('name',$name,time() + 3600);
 setcookie('age',$age,time() + 3600);
@@ -58,8 +58,8 @@ setcookie('age',$age,time() + 3600);
     <td><?php echo $age; ?></td>
   </tr>
   <tr>
-    <td>所属</td>
-    <td><?php echo $category ?></td>
+    <td>所属部署</td>
+    <td><?php echo $department ?></td>
   </tr>
   
 </table>
